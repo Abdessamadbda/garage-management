@@ -1,0 +1,184 @@
+version: "3.9"
+
+networks:
+  garage-network:
+    driver: bridge
+
+services:
+  eureka-server:
+    build:
+      context: ./garage_management_backend/eureka_server
+      dockerfile: Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - garage-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xmx512m
+
+  # Zookeeper for Kafka
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.1
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+    networks:
+      - garage-network
+    healthcheck:
+      test: ["CMD", "echo ruok | nc localhost 2181 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # Kafka Message Broker
+  kafka:
+    image: confluentinc/cp-kafka:7.5.1
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    ports:
+      - "9092:9092"
+      - "9093:9093"
+    networks:
+      - garage-network
+    healthcheck:
+      test:
+        - "CMD"
+        - "kafka-broker-api-versions"
+        - "--bootstrap-server"
+        - "localhost:9092"
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  # API Gateway
+  apigateway:
+    build:
+      context: ./garage_management_backend/ApiGateway
+      dockerfile: Dockerfile
+    container_name: apigateway
+    ports:
+      - "8080:8080"
+    networks:
+      - garage-network
+    depends_on:
+      - eureka-server
+      - client_service
+      - vehicle-service
+      - planification_service
+      - notification-service
+      - facture_service
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+
+  # Frontend Service
+  frontend:
+    build:
+      context: ./garage-management-frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - garage-network
+
+  # Client Service
+  client_service:
+    build:
+      context: ./garage_management_backend/client_service
+      dockerfile: Dockerfile
+    container_name: client_service
+    ports:
+      - "8081:8081"
+    networks:
+      - garage-network
+    depends_on:
+      - eureka-server
+      - kafka
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+
+  # Vehicle Service
+  vehicle-service:
+    build:
+      context: ./garage_management_backend/vehicle-service
+      dockerfile: Dockerfile
+    container_name: vehicle-service
+    ports:
+      - "8085:8085"
+    networks:
+      - garage-network
+    depends_on:
+      - eureka-server
+      - kafka
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+
+  # Planification Service
+  planification_service:
+    build:
+      context: ./garage_management_backend/planification_service
+      dockerfile: Dockerfile
+    container_name: planification_service
+    ports:
+      - "8082:8082"
+    networks:
+      - garage-network
+    depends_on:
+      - eureka-server
+      - kafka
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+
+  # Notification Service
+  notification-service:
+    build:
+      context: ./garage_management_backend/notification-service
+      dockerfile: Dockerfile
+    container_name: notification-service
+    ports:
+      - "8084:8084"
+    networks:
+      - garage-network
+    depends_on:
+      - eureka-server
+      - kafka
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+
+  # Facture Service
+  facture_service:
+    build:
+      context: ./garage_management_backend/facture_service
+      dockerfile: Dockerfile
+    container_name: facture_service
+    ports:
+      - "8083:8083"
+    networks:
+      - garage-network
+    depends_on:
+      - eureka-server
+      - kafka
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092

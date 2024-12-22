@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b5f3f30f-37fb-43e0-9852-e7bd6c85da2f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/facture_service/src/main/java/com/example/facture_service/Service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/facture_service/src/main/java/com/example/facture_service/Service/PdfService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/example/client_service/ClientServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/example/client_service/ClientServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/example/client_service/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/example/client_service/Controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/example/client_service/Entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/example/client_service/Entities/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/example/client_service/Repositories/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/example/client_service/Repositories/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/example/client_service/Services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/example/client_service/Services/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facture_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/facture_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facture_service/src/main/java/com/example/facture_service/Entities/Invoice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facture_service/src/main/java/com/example/facture_service/FactureServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/facture_service/src/main/java/com/example/facture_service/FactureServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facture_service/src/main/java/com/example/facture_service/Repository/InvoiceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facture_service/src/main/java/com/example/facture_service/Service/InvoiceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facture_service/src/main/java/com/example/facture_service/Service/MaintenanceJobDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/facture_service/src/main/java/com/example/facture_service/Service/MaintenanceJobDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facture_service/src/main/java/com/example/facture_service/Service/MaintenanceJobServiceClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facture_service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/facture_service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/Controller/NotificationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/NotificationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/example/notificationservice/Service/NotificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planification_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/planification_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Controller/MaintenanceJobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Controller/MaintenanceJobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Entities/MaintenanceJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Entities/MaintenanceJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/PlanificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/PlanificationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Repositories/MaintenanceJobRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Repositories/MaintenanceJobRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Services/MaintenanceJobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Services/MaintenanceJobService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Services/VehicleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Services/VehicleDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Services/VehicleServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/planification_service/src/main/java/com/example/planification_service/Services/VehicleServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planification_service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/planification_service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicle-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/Controller/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/Controller/VehicleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/Entities/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/Entities/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/Repositories/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/Repositories/VehicleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/Services/ClientDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/Services/ClientDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/Services/ClientServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/Services/ClientServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/VehicleServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle-service/src/main/java/com/example/vehicleservice/VehicleServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicle-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/vehicle-service/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2nhQdsUB2ZcKufP2xPAfAA3nnnI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/Desktop/cours/s5p1/microservices/garage_management&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b5f3f30f-37fb-43e0-9852-e7bd6c85da2f" name="Changes" comment="" />
+      <created>1729422919846</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729422919846</updated>
+      <workItem from="1729422920917" duration="800000" />
+      <workItem from="1729423757452" duration="49000" />
+      <workItem from="1729423832146" duration="45000" />
+      <workItem from="1729423896480" duration="132000" />
+      <workItem from="1729424039605" duration="128000" />
+      <workItem from="1729424223230" duration="298000" />
+      <workItem from="1729424532059" duration="1073000" />
+      <workItem from="1729936955351" duration="23000" />
+      <workItem from="1732378802888" duration="5850000" />
+      <workItem from="1733741751714" duration="63000" />
+      <workItem from="1733741828291" duration="226000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
