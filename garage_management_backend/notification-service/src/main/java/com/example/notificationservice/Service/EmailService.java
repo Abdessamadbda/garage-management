@@ -99,7 +99,7 @@ public class EmailService {
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
         // Set email details
-        helper.setTo("abdessamadbadaoui9@gmail.com"); // Assuming ClientDTO has an email field
+        helper.setTo(client.getEmail()); // Assuming ClientDTO has an email field
         helper.setSubject("Maintenance programmée ");
 
         // Format vehicle information

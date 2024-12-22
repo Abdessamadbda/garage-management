@@ -92,7 +92,7 @@ public class EmailService {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
-        helper.setTo("abdessamadbadaoui9@gmail.com");
+        helper.setTo(client.getEmail());
         helper.setSubject("Maintenance Notification for Your Vehicle");
         helper.setText(buildEmailBody(client), true);
 
